@@ -35,7 +35,7 @@ export const businessList: Business[] = [
   Accepts Bitcoin.`,
     location: "Subang Jaya, Selangor",
     imgSrc: "/biz/myespresso-coffee.jpg",
-    href: "/blog/the-time-machine",
+    href: "https://www.myespresso.my/",
   },
   {
     title: "Nyenyak",
