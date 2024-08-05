@@ -1,23 +1,11 @@
-import { Button, buttonVariants } from "@/components/ui/button";
-import { siteConfig } from "@/config/site";
-import { cn, sortPosts } from "@/lib/utils";
 import { posts } from "#site/content";
-import Link from "next/link";
-import { PostItem } from "@/components/post-item";
-import { BusinessList } from "@/components/list";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { businessList } from "@/data/businessList";
-import { BackgroundGrid } from "@/components/background-grid";
-import WholePage from "@/components/whole-page";
-import { CurvedArrowWrapper } from "@/components/curved-arrow";
+import { sortPosts } from "@/lib/utils";
 import Image from "next/image";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import Link from "next/link";
 export default function Home() {
   const latestPosts = sortPosts(posts).slice(0, 5);
   return (
