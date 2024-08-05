@@ -29,6 +29,36 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-pt-[3.5rem]">
+      <title>Guna Bitcoin</title>
+      <meta
+        name="description"
+        content="Cari Perniagaan Yang Terima Bitcoin di Malaysia"
+      />
+
+      <meta property="og:url" content="https://gunabitcoin.my" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="Guna Bitcoin" />
+      <meta
+        property="og:description"
+        content="Cari Perniagaan Yang Terima Bitcoin di Malaysia"
+      />
+      <meta
+        property="og:image"
+        content="https://opengraph.b-cdn.net/production/images/26b68ef2-f4fd-4021-a166-f0ff2c203114.png?token=uFi8O-Piwn4vqkUoQZy92_aCCMkBMx6YMrIEn39JpZA&height=600&width=1200&expires=33258902041"
+      />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta property="twitter:domain" content="gunabitcoin.my" />
+      <meta property="twitter:url" content="https://gunabitcoin.my" />
+      <meta name="twitter:title" content="Guna Bitcoin" />
+      <meta
+        name="twitter:description"
+        content="Cari Perniagaan Yang Terima Bitcoin di Malaysia"
+      />
+      <meta
+        name="twitter:image"
+        content="https://opengraph.b-cdn.net/production/images/26b68ef2-f4fd-4021-a166-f0ff2c203114.png?token=uFi8O-Piwn4vqkUoQZy92_aCCMkBMx6YMrIEn39JpZA&height=600&width=1200&expires=33258902041"
+      />
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",
