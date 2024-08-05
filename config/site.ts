@@ -4,8 +4,8 @@ export const siteConfig = {
   description: "Cari Perniagaan Yang Terima Bitcoin di Malaysia",
   author: "admin",
   links: {
-    twitter: "https://twitter.com/jollyshopland",
-    github: "https://github.com/jolbol1",
+    twitter: "#",
+    github: "https://github.com/umarluqman/gunabitcoin.my",
     personalSite: "https://focusmode.app",
   },
 };
