@@ -6,6 +6,10 @@ import { businessList } from "@/data/businessList";
 import { sortPosts } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import { AnimatedButton } from "@/components/animated-button";
+
 export default function Home() {
   const latestPosts = sortPosts(posts).slice(0, 5);
   return (
@@ -13,9 +17,10 @@ export default function Home() {
       {/* <BackgroundGrid /> */}
       <section className="space-y-6 pb-8 pt-6 md:pb-12 md:mt-10 lg:py-32">
         <div className="container flex flex-col gap-4 text-center text-6xl font-bold">
-          <div className="flex items-center justify-center gap-4">
-            Guna Bitcoin
-            <span>
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4">
+            Guna
+            <span className="flex items-center gap-3">
+              Bitcoin
               <Image
                 src="/bitcoin-logo.svg"
                 alt="Bitcoin"
@@ -26,8 +31,8 @@ export default function Home() {
           </div>
 
           <div className="text-center text-lg font-light">
-            Bukan hanya sekadar aset spekulatif, ianya duit sebenar pada era
-            globalisasi ini.
+            Bukan hanya sekadar aset spekulatif, ianya duit sebenar zaman
+            internet masa kini.
           </div>
           <div className="mt-6 flex justify-center">
             {/* <TooltipProvider>
@@ -45,7 +50,7 @@ export default function Home() {
       </section>
       <Card className="max-w-5xl mx-auto space-y-6">
         <CardHeader>
-          <CardTitle>Senarai Perniagaan Yang Terima Bitcoin</CardTitle>
+          <CardTitle>Perniagaan Yang Terima Bitcoin</CardTitle>
         </CardHeader>
         <CardContent className="grid gap-8">
           {businessList
@@ -144,14 +149,15 @@ export default function Home() {
                       )} */}
                     </div>
                   </div>
-                  <Link
+                  <AnimatedButton href={item.href ?? "#"} />
+                  {/* <Link
                     href={item.href ?? "#"}
                     className="ml-auto font-medium"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <Button>Lihat</Button>
-                  </Link>
+                  </Link> */}
                 </div>
               );
             })}

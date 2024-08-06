@@ -24,7 +24,7 @@ export function MobileNav() {
         <MobileLink
           onOpenChange={setOpen}
           href="/"
-          className="flex items-center"
+          className="flex items-center gap-3"
         >
           <Icons.logo className="mr-2 h-4 w-4" />
           <span className="font-bold">{siteConfig.name}</span>
