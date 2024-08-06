@@ -66,7 +66,7 @@ export default function Home() {
                     <p className="text-sm font-medium leading-none">
                       {item.title}
                     </p>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-muted-foreground max-w-lg">
                       {item.description}
                     </p>
                   </div>
