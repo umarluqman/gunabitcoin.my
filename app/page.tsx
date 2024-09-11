@@ -50,7 +50,7 @@ export default function Home() {
       </section>
       <Card className="max-w-5xl mx-auto space-y-6">
         <CardHeader>
-          <CardTitle>Perniagaan Yang Terima Bitcoin</CardTitle>
+          <CardTitle>Perniagaan / Organisasi Yang Terima Bitcoin</CardTitle>
         </CardHeader>
         <CardContent className="grid gap-8">
           {businessList
