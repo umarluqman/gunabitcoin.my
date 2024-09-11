@@ -24,7 +24,7 @@ export function MainNav() {
           //   "text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block"
           // )}
         >
-          Sats (100M BTC) <LucideArrowRightLeft className="h-4 w-4" /> MYR
+          Sats <LucideArrowRightLeft className="h-4 w-4" /> MYR
         </Link>
       </Button>
 
