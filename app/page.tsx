@@ -1,14 +1,10 @@
 import { posts } from "#site/content";
+import { AnimatedButton } from "@/components/animated-button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { businessList } from "@/data/businessList";
 import { sortPosts } from "@/lib/utils";
 import Image from "next/image";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
-import { AnimatedButton } from "@/components/animated-button";
 
 export default function Home() {
   const latestPosts = sortPosts(posts).slice(0, 5);
@@ -54,7 +50,18 @@ export default function Home() {
         </CardHeader>
         <CardContent className="grid gap-8">
           {businessList
-            .sort((a, b) => a.title.localeCompare(b.title))
+            .sort((a, b) => {
+              // Check if 'sedekah' is in tags
+              const aHasSedekah = a.tags?.includes("sedekah") || false;
+              const bHasSedekah = b.tags?.includes("sedekah") || false;
+
+              // If one has 'sedekah' and the other doesn't, prioritize the one with 'sedekah'
+              if (aHasSedekah && !bHasSedekah) return -1;
+              if (!aHasSedekah && bHasSedekah) return 1;
+
+              // If both have 'sedekah' or both don't have 'sedekah', sort alphabetically
+              return a.title.localeCompare(b.title);
+            })
             .map((item) => {
               return (
                 <div className="flex items-center gap-4" key={item.title}>
