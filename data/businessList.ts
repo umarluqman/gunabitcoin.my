@@ -87,8 +87,8 @@ export const businessList: Business[] = [
     description: `Membantu anda untuk tidur dengan lebih nyenyak & lebih berkualiti.
   
   Ada masalah tidur? Tanya di sini: https://ngl.link/tidurnyenyak1`,
-    imgSrc: "/biz/nyenyak.jpg",
-    href: "https://nyenyak.orderla.co/",
+    imgSrc: "/biz/nyenyak.png",
+    href: "https://nyenyak.orderla.co?via=TxOQOt",
     twitter: "https://x.com/OfficialNyenyak",
   },
   {
