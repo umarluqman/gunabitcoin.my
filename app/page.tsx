@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       {/* <BackgroundGrid /> */}
-      <section className="space-y-6 pb-8 pt-6 md:pb-12 md:mt-10 lg:py-32">
+      <section className="py-16 md:py-20 lg:py-32">
         <div className="container flex flex-col gap-4 text-center text-6xl font-bold">
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4">
             Guna
@@ -30,8 +30,8 @@ export default function Home() {
             Bukan hanya sekadar aset spekulatif, ianya duit sebenar zaman
             internet masa kini.
           </div>
-          <div className="mt-6 flex justify-center">
-            {/* <TooltipProvider>
+          {/* <div className="mt-6 flex justify-center"> */}
+          {/* <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Button className="relative">Belajar Lanjut</Button>
@@ -41,12 +41,14 @@ export default function Home() {
                 </TooltipContent>
               </Tooltip>
             </TooltipProvider> */}
-          </div>
+          {/* </div> */}
         </div>
       </section>
       <Card className="max-w-5xl mx-auto space-y-6">
         <CardHeader>
-          <CardTitle>Perniagaan / Organisasi Yang Terima Bitcoin</CardTitle>
+          <CardTitle className="leading-normal tracking-normal">
+            Perniagaan / Organisasi Yang Terima Bitcoin
+          </CardTitle>
         </CardHeader>
         <CardContent className="grid gap-8">
           {businessList
