@@ -1,10 +1,10 @@
 import { posts } from "#site/content";
 import { AnimatedButton } from "@/components/animated-button";
+import { AnimatedHeader } from "@/components/animated-header";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { businessList } from "@/data/businessList";
 import { sortPosts } from "@/lib/utils";
-import Image from "next/image";
 
 export default function Home() {
   const latestPosts = sortPosts(posts).slice(0, 5);
@@ -13,18 +13,7 @@ export default function Home() {
       {/* <BackgroundGrid /> */}
       <section className="py-16 md:py-20 lg:py-32">
         <div className="container flex flex-col gap-4 text-center text-6xl font-bold">
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4">
-            Guna
-            <span className="flex items-center gap-3">
-              Bitcoin
-              <Image
-                src="/bitcoin-logo.svg"
-                alt="Bitcoin"
-                width={60}
-                height={60}
-              />
-            </span>
-          </div>
+          <AnimatedHeader />
 
           <div className="text-center text-lg font-light">
             Bukan hanya sekadar aset spekulatif, ianya duit sebenar zaman
