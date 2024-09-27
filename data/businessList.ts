@@ -32,7 +32,7 @@ export const businessList: Business[] = [
     title: "Bitcoin for Palestine",
     tags: ["sedekah"],
     imgSrc: "/biz/bitcoin-for-gaza.jpg",
-    href: "https://geyser.fund/project/bitcoinforpalestine",
+    href: "https://btcpay.foragoodcause.xyz/apps/37W6GRGutGU9a4F61uHeFcjHFyQv/crowdfund",
     description:
       "Emergency appeal for aid for the people of Gaza, donate directly to Youssef Mahmoud and follow the updates in his X (formally Twitter) account.",
   },
