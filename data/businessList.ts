@@ -10,6 +10,7 @@ interface Business {
   linkedin?: string;
   takeApp?: string;
   tags?: string[];
+  type: "digital" | "fizikal" | "digital, fizikal";
 }
 
 export const businessList: Business[] = [
@@ -20,6 +21,7 @@ export const businessList: Business[] = [
     href: "https://www.instagram.com/babalow_bangsar_utama/?hl=en",
     description:
       "■ Mon > Sat • 8.00am - 8.00pm ■ Sun • closed ■ Delivery & Takeaway & Dine-in | GrabFood | Foodpanda",
+    type: "fizikal",
   },
   {
     title: "Anak Baba",
@@ -27,6 +29,7 @@ export const businessList: Business[] = [
     imgSrc: "/biz/anak-baba.jpg",
     href: "https://www.instagram.com/restoran.anak.baba/?hl=en",
     description: "We Open Daily 7am to 10pm. ⚡️ Lighting Accepted",
+    type: "fizikal",
   },
   {
     title: "Bitcoin for Palestine",
@@ -35,6 +38,7 @@ export const businessList: Business[] = [
     href: "https://btcpay.foragoodcause.xyz/apps/37W6GRGutGU9a4F61uHeFcjHFyQv/crowdfund",
     description:
       "Emergency appeal for aid for the people of Gaza, donate directly to Youssef Mahmoud and follow the updates in his X (formally Twitter) account.",
+    type: "digital",
   },
   {
     title: "Global Sadaqah",
@@ -43,6 +47,7 @@ export const businessList: Business[] = [
     href: "https://www.globalsadaqah.com/",
     description:
       "Give Charity, Sadaqah, Zakat, and Waqf online. Corporate Donors are always welcome. We’re based in Malaysia to serve the whole world.",
+    type: "digital",
   },
   {
     title: "Hajid Honey",
@@ -52,6 +57,7 @@ export const businessList: Business[] = [
     location: "Klang Valley",
     href: "https://hajidhoney.orderla.co/",
     instagram: "https://www.instagram.com/hajid.honey",
+    type: "fizikal",
   },
   {
     title: "Ayam Lepas Lenggeng",
@@ -62,6 +68,7 @@ export const businessList: Business[] = [
     href: "https://ayamlepaslenggeng.orderla.my/ayam-lepas-bebas",
     twitter: "https://x.com/AyamLepasMY",
     facebook: "https://www.facebook.com/p/Ayam-Lepas-Lenggeng-61555749073667",
+    type: "fizikal",
   },
   {
     title: "Tradisi Leluhur",
@@ -71,6 +78,7 @@ export const businessList: Business[] = [
     href: "https://tradisileluhur.orderla.my/store",
     takeApp: "https://take.app/tradisileluhur",
     twitter: "https://x.com/TradisiLeluhur",
+    type: "fizikal",
   },
   {
     title: "My Espresso Cafe",
@@ -80,6 +88,7 @@ export const businessList: Business[] = [
     location: "Subang Jaya, Selangor",
     imgSrc: "/biz/myespresso-coffee.jpg",
     href: "https://www.myespresso.my/",
+    type: "fizikal",
   },
   {
     title: "Nyenyak",
@@ -90,6 +99,7 @@ export const businessList: Business[] = [
     imgSrc: "/biz/nyenyak.png",
     href: "https://nyenyak.orderla.co?via=TxOQOt",
     twitter: "https://x.com/OfficialNyenyak",
+    type: "fizikal",
   },
   {
     title: "Senji House",
@@ -100,5 +110,6 @@ export const businessList: Business[] = [
     href: "https://senjihouse.com.my/",
     twitter: "https://x.com/senjihouse",
     instagram: "https://www.instagram.com/senjihouse/",
+    type: "digital, fizikal",
   },
 ];

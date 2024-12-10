@@ -1,13 +1,27 @@
+"use client";
 import { posts } from "#site/content";
 import { AnimatedButton } from "@/components/animated-button";
 import { AnimatedHeader } from "@/components/animated-header";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { businessList } from "@/data/businessList";
 import { sortPosts } from "@/lib/utils";
+import { useQueryState } from "nuqs";
 
 export default function Home() {
   const latestPosts = sortPosts(posts).slice(0, 5);
+  const [selectedType, setSelectedType] = useQueryState<string>("type", {
+    parse: (value: string | null) => value ?? "all",
+    defaultValue: "all",
+  });
+
   return (
     <>
       {/* <BackgroundGrid /> */}
@@ -34,23 +48,41 @@ export default function Home() {
         </div>
       </section>
       <Card className="max-w-5xl mx-auto space-y-6">
-        <CardHeader>
+        <CardHeader className="flex flex-row items-center justify-between">
           <CardTitle className="leading-normal tracking-normal">
             Perniagaan / Organisasi Yang Terima Bitcoin
           </CardTitle>
+          <Select
+            onValueChange={(value) => setSelectedType(value)}
+            defaultValue="all"
+            value={selectedType}
+          >
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="Semua Produk" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="all">Semua Produk</SelectItem>
+              <SelectItem value="digital">Digital</SelectItem>
+              <SelectItem value="fizikal">Fizikal</SelectItem>
+              <SelectItem value="digital, fizikal">
+                Digital & Fizikal
+              </SelectItem>
+            </SelectContent>
+          </Select>
         </CardHeader>
         <CardContent className="grid gap-8">
           {businessList
+            .filter((item) => {
+              if (selectedType === "all") return true;
+              return item.type === selectedType;
+            })
             .sort((a, b) => {
-              // Check if 'sedekah' is in tags
               const aHasSedekah = a.tags?.includes("sedekah") || false;
               const bHasSedekah = b.tags?.includes("sedekah") || false;
 
-              // If one has 'sedekah' and the other doesn't, prioritize the one with 'sedekah'
               if (aHasSedekah && !bHasSedekah) return -1;
               if (!aHasSedekah && bHasSedekah) return 1;
 
-              // If both have 'sedekah' or both don't have 'sedekah', sort alphabetically
               return a.title.localeCompare(b.title);
             })
             .map((item) => {
