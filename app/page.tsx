@@ -14,13 +14,167 @@ import {
 import { businessList } from "@/data/businessList";
 import { sortPosts } from "@/lib/utils";
 import { useQueryState } from "nuqs";
+import { Suspense } from "react";
 
+// Create a new client component for the filtered list
+function BusinessListSection({
+  selectedType,
+  setSelectedType,
+}: {
+  selectedType: string;
+  setSelectedType: (value: string) => void;
+}) {
+  return (
+    <Card className="max-w-5xl mx-auto space-y-6">
+      <CardHeader className="flex flex-row items-center justify-between">
+        <CardTitle className="leading-normal tracking-normal">
+          Perniagaan / Organisasi Yang Terima Bitcoin
+        </CardTitle>
+        <Select
+          onValueChange={(value) => setSelectedType(value)}
+          defaultValue="all"
+          value={selectedType}
+        >
+          <SelectTrigger className="w-[180px]">
+            <SelectValue placeholder="Semua Produk" />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="all">Semua Produk</SelectItem>
+            <SelectItem value="digital">Digital</SelectItem>
+            <SelectItem value="fizikal">Fizikal</SelectItem>
+            <SelectItem value="digital, fizikal">Digital & Fizikal</SelectItem>
+          </SelectContent>
+        </Select>
+      </CardHeader>
+      <CardContent className="grid gap-8">
+        {businessList
+          .filter((item) => {
+            if (selectedType === "all") return true;
+            return item.type === selectedType;
+          })
+          .sort((a, b) => {
+            const aHasSedekah = a.tags?.includes("sedekah") || false;
+            const bHasSedekah = b.tags?.includes("sedekah") || false;
+
+            if (aHasSedekah && !bHasSedekah) return -1;
+            if (!aHasSedekah && bHasSedekah) return 1;
+
+            return a.title.localeCompare(b.title);
+          })
+          .map((item) => {
+            return (
+              <div className="flex items-center gap-4" key={item.title}>
+                <Avatar className="h-12 w-12 flex">
+                  <AvatarImage src={item.imgSrc} alt="Avatar" />
+                  <AvatarFallback>GB</AvatarFallback>
+                </Avatar>
+                <div className="grid gap-1">
+                  <p className="text-sm font-medium leading-none">
+                    {item.title}
+                  </p>
+                  <p className="text-sm text-muted-foreground max-w-lg">
+                    {item.description}
+                  </p>
+                </div>
+                <div className="grid gap-1">
+                  <div className="flex gap-2">
+                    {/* {item.twitter && (
+                      <Link
+                        href={item.twitter}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="text-blue-400 hover:text-blue-500"
+                        >
+                          <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
+                        </svg>
+                      </Link>
+                    )} */}
+                    {/* {item.facebook && (
+                      <Link
+                        href={item.facebook}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="text-blue-600 hover:text-blue-700"
+                        >
+                          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                        </svg>
+                      </Link>
+                    )}
+                    {item.instagram && (
+                      <Link
+                        href={item.instagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          className="text-pink-500 hover:text-pink-600"
+                        >
+                          <rect
+                            x="2"
+                            y="2"
+                            width="20"
+                            height="20"
+                            rx="5"
+                            ry="5"
+                          ></rect>
+                          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                      </Link>
+                    )} */}
+                  </div>
+                </div>
+                <AnimatedButton href={item.href ?? "#"} />
+                {/* <Link
+                  href={item.href ?? "#"}
+                  className="ml-auto font-medium"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button>Lihat</Button>
+                </Link> */}
+              </div>
+            );
+          })}
+      </CardContent>
+    </Card>
+  );
+}
+
+// Update the main component
 export default function Home() {
   const latestPosts = sortPosts(posts).slice(0, 5);
-  const [selectedType, setSelectedType] = useQueryState<string>("type", {
-    parse: (value: string | null) => value ?? "all",
-    defaultValue: "all",
-  });
 
   return (
     <>
@@ -47,152 +201,10 @@ export default function Home() {
           {/* </div> */}
         </div>
       </section>
-      <Card className="max-w-5xl mx-auto space-y-6">
-        <CardHeader className="flex flex-row items-center justify-between">
-          <CardTitle className="leading-normal tracking-normal">
-            Perniagaan / Organisasi Yang Terima Bitcoin
-          </CardTitle>
-          <Select
-            onValueChange={(value) => setSelectedType(value)}
-            defaultValue="all"
-            value={selectedType}
-          >
-            <SelectTrigger className="w-[180px]">
-              <SelectValue placeholder="Semua Produk" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectItem value="all">Semua Produk</SelectItem>
-              <SelectItem value="digital">Digital</SelectItem>
-              <SelectItem value="fizikal">Fizikal</SelectItem>
-              <SelectItem value="digital, fizikal">
-                Digital & Fizikal
-              </SelectItem>
-            </SelectContent>
-          </Select>
-        </CardHeader>
-        <CardContent className="grid gap-8">
-          {businessList
-            .filter((item) => {
-              if (selectedType === "all") return true;
-              return item.type === selectedType;
-            })
-            .sort((a, b) => {
-              const aHasSedekah = a.tags?.includes("sedekah") || false;
-              const bHasSedekah = b.tags?.includes("sedekah") || false;
 
-              if (aHasSedekah && !bHasSedekah) return -1;
-              if (!aHasSedekah && bHasSedekah) return 1;
-
-              return a.title.localeCompare(b.title);
-            })
-            .map((item) => {
-              return (
-                <div className="flex items-center gap-4" key={item.title}>
-                  <Avatar className="h-12 w-12 flex">
-                    <AvatarImage src={item.imgSrc} alt="Avatar" />
-                    <AvatarFallback>GB</AvatarFallback>
-                  </Avatar>
-                  <div className="grid gap-1">
-                    <p className="text-sm font-medium leading-none">
-                      {item.title}
-                    </p>
-                    <p className="text-sm text-muted-foreground max-w-lg">
-                      {item.description}
-                    </p>
-                  </div>
-                  <div className="grid gap-1">
-                    <div className="flex gap-2">
-                      {/* {item.twitter && (
-                        <Link
-                          href={item.twitter}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="currentColor"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="text-blue-400 hover:text-blue-500"
-                          >
-                            <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path>
-                          </svg>
-                        </Link>
-                      )} */}
-                      {/* {item.facebook && (
-                        <Link
-                          href={item.facebook}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="text-blue-600 hover:text-blue-700"
-                          >
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                          </svg>
-                        </Link>
-                      )}
-                      {item.instagram && (
-                        <Link
-                          href={item.instagram}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            strokeWidth="2"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            className="text-pink-500 hover:text-pink-600"
-                          >
-                            <rect
-                              x="2"
-                              y="2"
-                              width="20"
-                              height="20"
-                              rx="5"
-                              ry="5"
-                            ></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                          </svg>
-                        </Link>
-                      )} */}
-                    </div>
-                  </div>
-                  <AnimatedButton href={item.href ?? "#"} />
-                  {/* <Link
-                    href={item.href ?? "#"}
-                    className="ml-auto font-medium"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Button>Lihat</Button>
-                  </Link> */}
-                </div>
-              );
-            })}
-        </CardContent>
-      </Card>
+      <Suspense fallback={<div>Loading...</div>}>
+        <BusinessListWithParams />
+      </Suspense>
       {/* <CurvedArrowWrapper fromSelector="#from" toSelector="#to" /> */}
       {/* <WholePage /> */}
       {/* <div className="flex flex-col items-center justify-center">
@@ -221,5 +233,20 @@ export default function Home() {
         </ul>
       </section> */}
     </>
+  );
+}
+
+// Create a wrapper component for the query params
+function BusinessListWithParams() {
+  const [selectedType, setSelectedType] = useQueryState<string>("type", {
+    parse: (value: string | null) => value ?? "all",
+    defaultValue: "all",
+  });
+
+  return (
+    <BusinessListSection
+      selectedType={selectedType}
+      setSelectedType={setSelectedType}
+    />
   );
 }
