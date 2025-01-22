@@ -18,7 +18,7 @@ export const businessList: Business[] = [
     title: "Nutrient Native",
     imgSrc: "/biz/nutrient-native.jpeg",
     tags: ["natural"],
-    href: "https://nutrientnative.orderla.co/",
+    href: "https://nutrientnative.orderla.co?via=FVoLvQ",
     description:
       "Reviving ancestral wisdom ☀️ | Nourishing body & soul with real, nutrient-dense food 🥩 | We Accept Bitcoin⚡",
     type: "fizikal",
