@@ -184,7 +184,7 @@ export default function Home() {
           <AnimatedHeader />
 
           <div className="text-center text-lg font-light">
-            Bukan hanya sekadar aset spekulatif, ianya duit sebenar zaman
+            Bukan hanya sekadar aset pelaburan, ianya duit sebenar zaman
             internet masa kini.
           </div>
           {/* <div className="mt-6 flex justify-center"> */}
