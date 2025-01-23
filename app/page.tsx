@@ -53,6 +53,11 @@ function BusinessListSection({
             return item.type === selectedType;
           })
           .sort((a, b) => {
+            // First, sort by featured status
+            if (a.featured && !b.featured) return -1;
+            if (!a.featured && b.featured) return 1;
+
+            // Then sort by sedekah tag
             const aHasSedekah = a.tags?.includes("sedekah") || false;
             const bHasSedekah = b.tags?.includes("sedekah") || false;
 
@@ -63,14 +68,28 @@ function BusinessListSection({
           })
           .map((item) => {
             return (
-              <div className="flex items-center gap-4" key={item.title}>
+              <div 
+                className={`flex items-center gap-4 p-4 rounded-lg transition-all ${
+                  item.featured 
+                    ? 'bg-gradient-to-r from-yellow-50 to-yellow-100 dark:from-yellow-900/10 dark:to-yellow-800/10 border border-yellow-200 dark:border-yellow-800/30 shadow-sm' 
+                    : ''
+                }`} 
+                key={item.title}
+              >
                 <Avatar className="h-12 w-12 flex">
                   <AvatarImage src={item.imgSrc} alt="Avatar" />
                   <AvatarFallback>GB</AvatarFallback>
                 </Avatar>
                 <div className="grid gap-1">
-                  <p className="text-sm font-medium leading-none">
+                  <p className={`text-sm font-medium leading-none ${
+                    item.featured ? 'text-yellow-800 dark:text-yellow-200' : ''
+                  }`}>
                     {item.title}
+                    {item.featured && (
+                      <span className="ml-2 inline-flex items-center rounded-md bg-yellow-50 dark:bg-yellow-900/30 px-2 py-1 text-xs font-medium text-yellow-800 dark:text-yellow-200">
+                        Featured
+                      </span>
+                    )}
                   </p>
                   <p className="text-sm text-muted-foreground max-w-lg">
                     {item.description}

@@ -11,6 +11,7 @@ interface Business {
   takeApp?: string;
   tags?: string[];
   type: "digital" | "fizikal" | "digital, fizikal";
+  featured?: boolean;
 }
 
 export const businessList: Business[] = [
@@ -22,6 +23,7 @@ export const businessList: Business[] = [
     description:
       "Reviving ancestral wisdom ☀️ | Nourishing body & soul with real, nutrient-dense food 🥩 | We Accept Bitcoin⚡",
     type: "fizikal",
+    featured: true,
   },
   {
     title: "Baba Low's",
@@ -109,6 +111,7 @@ export const businessList: Business[] = [
     href: "https://nyenyak.orderla.co?via=TxOQOt",
     twitter: "https://x.com/OfficialNyenyak",
     type: "fizikal",
+    featured: true,
   },
   {
     title: "Senji House",
