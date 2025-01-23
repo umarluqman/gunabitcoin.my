@@ -28,7 +28,7 @@ function BusinessListSection({
     <Card className="max-w-5xl mx-auto space-y-6">
       <CardHeader className="flex flex-row items-center justify-between">
         <CardTitle className="leading-normal tracking-normal">
-          Perniagaan / Organisasi Yang Terima Bitcoin
+          Entiti Yang Terima Bitcoin
         </CardTitle>
         <Select
           onValueChange={(value) => setSelectedType(value)}
@@ -68,12 +68,12 @@ function BusinessListSection({
           })
           .map((item) => {
             return (
-              <div 
+              <div
                 className={`flex items-center gap-4 p-4 rounded-lg transition-all ${
-                  item.featured 
-                    ? 'bg-gradient-to-r from-yellow-50 to-yellow-100 dark:from-yellow-900/10 dark:to-yellow-800/10 border border-yellow-200 dark:border-yellow-800/30 shadow-sm' 
-                    : ''
-                }`} 
+                  item.featured
+                    ? "bg-gradient-to-r from-yellow-50 to-yellow-100 dark:from-yellow-900/10 dark:to-yellow-800/10 border border-yellow-200 dark:border-yellow-800/30 shadow-sm"
+                    : ""
+                }`}
                 key={item.title}
               >
                 <Avatar className="h-12 w-12 flex">
@@ -81,9 +81,13 @@ function BusinessListSection({
                   <AvatarFallback>GB</AvatarFallback>
                 </Avatar>
                 <div className="grid gap-1">
-                  <p className={`text-sm font-medium leading-none ${
-                    item.featured ? 'text-yellow-800 dark:text-yellow-200' : ''
-                  }`}>
+                  <p
+                    className={`text-sm font-medium leading-none ${
+                      item.featured
+                        ? "text-yellow-800 dark:text-yellow-200"
+                        : ""
+                    }`}
+                  >
                     {item.title}
                     {item.featured && (
                       <span className="ml-2 inline-flex items-center rounded-md bg-yellow-50 dark:bg-yellow-900/30 px-2 py-1 text-xs font-medium text-yellow-800 dark:text-yellow-200">
