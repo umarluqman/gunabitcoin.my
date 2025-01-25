@@ -34,14 +34,14 @@ export const businessList: Business[] = [
       "■ Mon > Sat • 8.00am - 8.00pm ■ Sun • closed ■ Delivery & Takeaway & Dine-in | GrabFood | Foodpanda",
     type: "fizikal",
   },
-  {
-    title: "Anak Baba",
-    tags: ["restoran"],
-    imgSrc: "/biz/anak-baba.jpg",
-    href: "https://www.instagram.com/restoran.anak.baba/?hl=en",
-    description: "We Open Daily 7am to 10pm. ⚡️ Lighting Accepted",
-    type: "fizikal",
-  },
+  // {
+  //   title: "Anak Baba",
+  //   tags: ["restoran"],
+  //   imgSrc: "/biz/anak-baba.jpg",
+  //   href: "https://www.instagram.com/restoran.anak.baba/?hl=en",
+  //   description: "We Open Daily 7am to 10pm. ⚡️ Lighting Accepted",
+  //   type: "fizikal",
+  // },
   {
     title: "Bitcoin for Palestine",
     tags: ["sedekah"],
