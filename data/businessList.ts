@@ -25,15 +25,15 @@ export const businessList: Business[] = [
     type: "fizikal",
     featured: true,
   },
-  {
-    title: "Baba Low's",
-    imgSrc: "/biz/baba-low.webp",
-    tags: ["restoran"],
-    href: "https://www.instagram.com/babalow_bangsar_utama/?hl=en",
-    description:
-      "■ Mon > Sat • 8.00am - 8.00pm ■ Sun • closed ■ Delivery & Takeaway & Dine-in | GrabFood | Foodpanda",
-    type: "fizikal",
-  },
+  // {
+  //   title: "Baba Low's",
+  //   imgSrc: "/biz/baba-low.webp",
+  //   tags: ["restoran"],
+  //   href: "https://www.instagram.com/babalow_bangsar_utama/?hl=en",
+  //   description:
+  //     "■ Mon > Sat • 8.00am - 8.00pm ■ Sun • closed ■ Delivery & Takeaway & Dine-in | GrabFood | Foodpanda",
+  //   type: "fizikal",
+  // },
   // {
   //   title: "Anak Baba",
   //   tags: ["restoran"],
