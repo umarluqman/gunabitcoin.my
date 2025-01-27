@@ -15,6 +15,7 @@ import { businessList } from "@/data/businessList";
 import { sortPosts } from "@/lib/utils";
 import { useQueryState } from "nuqs";
 import { Suspense } from "react";
+import { Footer } from "@/components/footer";
 
 // Create a new client component for the filtered list
 function BusinessListSection({
@@ -200,7 +201,7 @@ export default function Home() {
   const latestPosts = sortPosts(posts).slice(0, 5);
 
   return (
-    <>
+    <main>
       {/* <BackgroundGrid /> */}
       <section className="py-16 md:py-20 lg:py-32">
         <div className="container flex flex-col gap-4 text-center text-6xl font-bold">
@@ -255,7 +256,7 @@ export default function Home() {
           ))}
         </ul>
       </section> */}
-    </>
+    </main>
   );
 }
 
