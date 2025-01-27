@@ -39,7 +39,7 @@ export function Footer() {
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-2"
               >
                 <Github className="h-4 w-4" />
-                Sumber Terbuka
+                GitHub
               </Link>
               <Link
                 href="https://github.com/umarluqman/gunabitcoin.my"
