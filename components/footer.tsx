@@ -42,7 +42,7 @@ export function Footer() {
                 GitHub
               </Link>
               <Link
-                href="https://github.com/umarluqman/gunabitcoin.my"
+                href="https://www.dialisis.my/"
                 target="_blank"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-2"
               >
