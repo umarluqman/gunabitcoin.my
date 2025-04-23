@@ -25,23 +25,6 @@ export const businessList: Business[] = [
     type: "fizikal",
     featured: true,
   },
-  // {
-  //   title: "Baba Low's",
-  //   imgSrc: "/biz/baba-low.webp",
-  //   tags: ["restoran"],
-  //   href: "https://www.instagram.com/babalow_bangsar_utama/?hl=en",
-  //   description:
-  //     "■ Mon > Sat • 8.00am - 8.00pm ■ Sun • closed ■ Delivery & Takeaway & Dine-in | GrabFood | Foodpanda",
-  //   type: "fizikal",
-  // },
-  // {
-  //   title: "Anak Baba",
-  //   tags: ["restoran"],
-  //   imgSrc: "/biz/anak-baba.jpg",
-  //   href: "https://www.instagram.com/restoran.anak.baba/?hl=en",
-  //   description: "We Open Daily 7am to 10pm. ⚡️ Lighting Accepted",
-  //   type: "fizikal",
-  // },
   {
     title: "Bitcoin for Palestine",
     tags: ["sedekah"],
@@ -90,6 +73,7 @@ export const businessList: Business[] = [
     takeApp: "https://take.app/tradisileluhur",
     twitter: "https://x.com/TradisiLeluhur",
     type: "fizikal",
+    featured: true,
   },
   {
     title: "My Espresso Cafe",
