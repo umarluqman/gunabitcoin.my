@@ -69,7 +69,7 @@ export const businessList: Business[] = [
     tags: ["natural"],
     description: `Jika baik untuk dimakan, baik juga untuk luaran | Based Hair×Facial×Body Care Company | 100% Natural.`,
     imgSrc: "/biz/tradisi-leluhur.jpg",
-    href: "https://tradisileluhur.orderla.my/store",
+    href: "https://tradisileluhur.orderla.co/?ref=vSmqjU",
     takeApp: "https://take.app/tradisileluhur",
     twitter: "https://x.com/TradisiLeluhur",
     type: "fizikal",
