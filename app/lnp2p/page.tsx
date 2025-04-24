@@ -14,7 +14,7 @@ export default function MyApp() {
     <div className="mt-20">
       <Cal
         namespace="lnp2p-malaysia-step-by-step"
-        calLink="gunabitcoin.my/lnp2p-malaysia-step-by-step"
+        calLink="lokalmaxi/lnp2p-malaysia-step-by-step"
         style={{ width: "100%", height: "100%", overflow: "scroll" }}
         config={{ layout: "month_view" }}
       />
