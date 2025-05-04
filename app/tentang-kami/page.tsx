@@ -33,11 +33,18 @@ export default async function AboutPage() {
           </p> */}
         </div>
         <p className="text-muted-foreground text-lg py-4">
-          Guna Bitcoin ialah platform yang membantu anda mencari perniagaan yang
-          menerima Bitcoin di Malaysia. Matlamat kami adalah untuk memberi
-          kesedaran yang Bitcoin bukan hanya sekadar aset spekulatif tetapi ia
-          juga ialah wang sebenar pada zaman internet masa kini.
+          Guna Bitcoin ialah platform yang membantu anda mencari perniagaan
+          ataupun entiti yang menerima Bitcoin di Malaysia sebagai medium of
+          exchange. Matlamat kami adalah untuk memberi kesedaran yang Bitcoin
+          bukan hanya sekadar aset pelaburan tetapi ia juga ialah wang sebenar
+          pada zaman internet masa kini dan mengapa ia berpotensi untuk mengubha
+          dunia ke arah lebih baik.
         </p>
+        {/* <p className="text-muted-foreground text-lg py-4">
+          Menjadikan Bitcoin sebagai medium of exchange semestinya mengambil
+          masa yang lama, tetapi kami kekal optimisk yang bottom-up approach seperti ini perlu
+          bagi dilakukan kerana in
+        </p> */}
       </div>
     </div>
   );

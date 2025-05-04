@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Icons } from "./icons";
 import { Button } from "./ui/button";
+import { cn } from "@/lib/utils";
 
 export function MainNav() {
   const pathname = usePathname();
@@ -28,7 +29,7 @@ export function MainNav() {
         </Link>
       </Button>
 
-      {/* <Link
+      <Link
         href="/blog"
         className={cn(
           "text-sm font-medium transition-colors hover:text-primary hidden sm:inline-block",
@@ -36,7 +37,7 @@ export function MainNav() {
         )}
       >
         Blog
-      </Link> */}
+      </Link>
       {/* <Link
         href="/tentang-kami"
         className={cn(

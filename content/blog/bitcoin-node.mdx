@@ -1,0 +1,150 @@
+---
+title: Bitcoin Node 101
+description: Bitcoin Node, nadi utama yang memastikan rangkaian Bitcoin kekal telus, selamat, dan benar-benar decentralized dan anda boleh jadi sebahagian daripadanya hari ini.
+date: 2025-05-02
+tags: ["Bitcoin Node"]
+published: true
+---
+
+<Callout type="warning">
+  **Node**: Komputer (ataupun server) yang terhubung dengan sesuatu rangkaian
+  (_network_). Ia boleh menghantar, menerima, atau memproses data.
+</Callout>
+
+<Callout type="warning">
+  **Server**: Komputer yang menjalankan sesuatu perision _(software)_ tanpa
+  henti 24/7 untuk menyediakan data atau servis kepada pengguna lain. Secara
+  amnya, komputer kita pun boleh dijadikan server tetapi perlu diaktifkan 24/7.
+</Callout>
+
+<Callout type="warning">
+  **Blokchain**: Pengkalan data khas _(database)_ yang mana data yang disimpan
+  tidak boleh diubah atau dipalsukan. Data disusun dalam bentuk blok-blok yang
+  dirantai bersama, dan setiap blok menyimpan data berkaitan kewangan. Dalam
+  Bitcoin blockchain, kebanyakan data ialah data transaksi.
+</Callout>
+
+Sebelum kita terus pergi ke topik Bitcoin Node, penting untuk kita tahu perbezaan antara sistem _centralized_ dan sistem _decentralized_.
+
+## Sistem _Centralized_
+
+<ImageWithCaption
+  src="/cen.png"
+  alt="Sistem centralisasi"
+  caption="Gambaran sistem berpusat _centralized_"
+  width={500}
+  height={300}
+/>
+
+Sistem _centralized_ ialah sistem yang dikawal **sepenuhnya** oleh satu pihak/orgnisasi. Kita perlu percaya pada pihak yang menguruskan server tersebut dan menyimpan data kita dengan baik.
+Jika centralized server itu kena _compromised_, seluruh app ataupun website yang bersambung dengan server tersebut akan _down_. Contoh _centralized_ sistem, aplikasi Maybank dan Facebook.
+
+## Sistem Desentralized
+
+Dalam sistem decentralisasi, tiada orang tengah dan kawalan diedarkan ke seluruh rangkaian pengguna (orang yang run Bitcoin node). Ia lebih selamat dah telus kerana data disahkan oleh ramai pihak. Bulatan warna jingga pada gambar di bawah itulah kita panggil sebagai Node.
+
+<ImageWithCaption
+  src="/decen.png"
+  alt="Decentralized"
+  caption="Gambaran sistem decentralized tanpa ada satu pihak yang kawal sepenuhnya."
+  width={500}
+  height={300}
+/>
+
+<ImageWithCaption
+  src="/quote-one.webp"
+  alt="Rapl Merkle"
+  caption="Ralph Merkle ialah saintis komputer yang mencipta Merkle Tree iaitu struktur data yang digunakan dalam Bitcoin."
+  width={500}
+  height={300}
+/>
+
+## Apa itu Bitcoin Node?
+
+Bitcoin Node, komputer ataupun (server) yang menjalankan [perisian Bitcoin](https://github.com/bitcoinknots/bitcoin) yang bersumber terbuka dan boleh diakses oleh semua orang. Semua orang boleh melihat, mengesahkan, memberi maklum balas, usulkan cadangan dan mencadangkan perubahan pada kod tersebut.
+
+<ImageWithCaption
+  src="/open-source.png"
+  alt="Sistem centralisasi"
+  caption="Lumrah projek sumber terbuka (open-source) yang kita tidak bersyukur."
+  width={500}
+  height={300}
+/>
+
+Apibila kita run Bitcoin node, komputer kita akan berhubung dengan node yang lain juga dalam jaringan Bitcoin. Semua Bitcoin node dalam rangkaian Bitcoin akan memastikan bahawa semua transaksi yang dilakukan adalah sah, tiada _double spending_ dan konsisten mengikut protokol ataupun _consensus rules_ Bitcoin.
+
+Secara teknikalnya, Bitcoin node menyalin semua blok dalam blockchain (pengkalan data) dan setiap blok mengandungi banyak transaksi. Bitcoin node akan mengandungi transaksi sejak Bitcoin mula diperkenalkan pada tahun 2009 hingga sekarang.
+
+Size _blockchain_ Bitcoin sekarang ialah 700GB dan akan bertambah, untuk kita run Bitcoin node secara penuh (Full node), kita perlukan sekurang-kurangnya 1TB rungan storan. Oleh sebab transaksi akan terus bertambah, saiz pengkalan data (blockchain) juga akan membesar. Dan ini membuatkan ruang dalam sesautu blok dalam Bitcoin itu terhad.
+
+Sebolehnya, **kita tidak mahu data bukan moteri** seperti seperti NFT atau gambar JPEG disimpan dalam blockchain Bitcoin seperti apa yang berlaku pada kripowang yang lain seperti Ethereum. Ini kerana ia akan menambahkan saiz storan yang diperlukan untuk menjalankan node. Hal ini boleh menyebabkan hanya golongan yang kaya atau berkemampuan sahaja yang mampu menjalankan node Bitcoin, dan ini bertentangan dengan prinsip keterbukaan dan desentralisasi rangkaian Bitcoin.
+
+## Perlu ke run Bitcoin Node sendiri?
+
+Tidak wajib terutamanya buat mereka yang baru belajar mengenai Bitcoin, tetapi ada kelebihan run node sendiri. Jika kita tidak run Bitcoin node kita sendiri, kita bergantung kepada pihak ketiga (server orang lain) untuk mendapatkan transaksi dan menghantar transakasi. Mudah digunakan tetapi kurang privasi.
+
+Untuk mereka yang baru bermula dengan Bitcoin, boleh guna wallet yang sedia ada seperti [**BlueWallet**](https://bluewallet.io/) yang sumber terbuka. Pihak [**BlueWallet**](https://bluewallet.io/) sendiri yang tolong run Bitcoin node untuk anda.
+
+<ImageWithCaption
+  src="/bluewallet-one.jpg"
+  alt="Sistem centralisasi"
+  caption="BlueWallet membenarkan pengguna untuk letak pautan Block Explorer dari Bitcoin node yang kita run sendiri"
+  width={500}
+  height={300}
+/>
+
+<ImageWithCaption
+  src="/bluewallet-two.jpg"
+  alt="Sistem centralisasi"
+  caption="BlueWallet membenarkan pengguna untuk letak pautan server dari Bitcoin node yang kita run sendiri"
+  width={500}
+  height={300}
+/>
+
+Menjalankan node Bitcoin sendiri memberi anda kawalan penuh ke atas interaksi anda dengan rangkaian Bitcoin, tanpa perlu bergantung kepada pihak ketiga.
+Dengan node sendiri, anda boleh mengesahkan transaksi anda secara langsung dan menggunakan wallet seperti BlueWallet yang membenarkan anda sambung terus ke node anda untuk mendapatkan data transaksi dan menghantar transaksi dengan lebih peribadi dan selamat.
+
+Secara ringkasnya, Bitcoin Node adalah tulang belakang rangkaian Bitcoin, memastikan setiap transaksi disahkan, rangkaian kekal selamat, telus, dan _decentralized_. Walaupun tidak wajib, menjalankan node sendiri memberikan kawalan penuh, privasi yang lebih tinggi, dan keupayaan untuk mengesahkan transaksi anda secara bebas tanpa bergantung kepada pihak ketiga. Semakin banyak nod yang aktif, semakin kukuh dan tahan rangkaian Bitcoin terhadap sebarang cubaan manipulasi. Dengan menjalan node anda sendiri, anda bukan sahaja melindungi Bitcoin anda tetapi juga menyumbang secara aktif kepada kesihatan dan integriti keseluruhan ekosistem Bitcoin.
+
+## Soalan lain tentang Bitcoin Node
+
+### Berapa node diperlukan untuk Bitcoin berfungsi?
+
+| Bilangan Node | Kuasa Perlombongan  | Boleh Bitcoin Berfungsi?                                       |
+| ------------- | ------------------- | -------------------------------------------------------------- |
+| 1 Nod         | Tiada atau Solo     | Tidak (Tiada konsensus, tiada perlombongan, tiada keselamatan) |
+| 2 Nod         | Mungkin 1 Pelombong | Hampir Tidak (Tiada keselamatan, mudah diserang)               |
+| ~10 Nod       | Beberapa Pelombong  | Rapuh (Tetapi masih terlalu terpusat)                          |
+| 100+ Nod      | Pelombong Teragih   | Ya (Cukup untuk penyahpusatan asas)                            |
+
+### Bolehkah kita run Bitcoin Node dalam komputer harian?
+
+Secara teknikalnya, boleh. Tetapi secara praktikalnya, tidak. Bitcoin node sepatutnya aktif sepanjang masa untuk memastikan jaringan kekal _update to date_ dengan transaksi terbaru.
+
+### Berapa banyak node yang ada sekarang?
+
+Setakat ni lebih kurang 22,000 node yang boleh dicapai berdasarkan laman web ini https://bitnodes.io/ dan akan berubah dari semasa ke semasa.
+
+<ImageWithCaption
+  src="/jumlah-node.png"
+  alt="Sistem centralisasi"
+  caption="Jumlah node yang dari semasa ke semasa dari laman web luke.dashjr.org"
+  width={700}
+  height={300}
+/>
+
+<ImageWithCaption
+  src="/top-node.png"
+  alt="Sistem centralisasi"
+  caption="Versi Bitcoin software yang dijalankan mengikut bilangan pada 4 Mei 2025"
+  width={500}
+  height={300}
+/>
+
+<ImageWithCaption
+  src="/node.png"
+  alt="Sistem centralisasi"
+  caption="Gambaran Bitcoin node yang dijalan di selurah dunia"
+  width={700}
+  height={300}
+/>
