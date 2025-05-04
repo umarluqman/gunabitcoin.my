@@ -75,9 +75,42 @@ Apibila kita run Bitcoin node, komputer kita akan berhubung dengan node yang lai
 
 Secara teknikalnya, Bitcoin node menyalin semua blok dalam blockchain (pengkalan data) dan setiap blok mengandungi banyak transaksi. Bitcoin node akan mengandungi transaksi sejak Bitcoin mula diperkenalkan pada tahun 2009 hingga sekarang.
 
-Size _blockchain_ Bitcoin sekarang ialah 700GB dan akan bertambah, untuk kita run Bitcoin node secara penuh (Full node), kita perlukan sekurang-kurangnya 1TB rungan storan. Oleh sebab transaksi akan terus bertambah, saiz pengkalan data (blockchain) juga akan membesar. Dan ini membuatkan ruang dalam sesautu blok dalam Bitcoin itu terhad.
+Size _blockchain_ Bitcoin sekarang adalah sekitar **700GB** dan akan bertambah, untuk kita run Bitcoin node secara penuh (Full node), kita perlukan sekurang-kurangnya 1TB rungan storan. Oleh sebab transaksi akan terus bertambah, saiz pengkalan data (blockchain) juga akan membesar. Dan ini membuatkan ruang dalam sesautu blok dalam Bitcoin itu terhad.
 
 Sebolehnya, **kita tidak mahu data bukan moteri** seperti seperti NFT atau gambar JPEG disimpan dalam blockchain Bitcoin seperti apa yang berlaku pada kripowang yang lain seperti Ethereum. Ini kerana ia akan menambahkan saiz storan yang diperlukan untuk menjalankan node. Hal ini boleh menyebabkan hanya golongan yang kaya atau berkemampuan sahaja yang mampu menjalankan node Bitcoin, dan ini bertentangan dengan prinsip keterbukaan dan desentralisasi rangkaian Bitcoin.
+
+### Berapa node diperlukan untuk Bitcoin berfungsi?
+
+| Bilangan Node | Bilanagan Miner     | Boleh Bitcoin Berfungsi?                                       |
+| ------------- | ------------------- | -------------------------------------------------------------- |
+| 1 Node        | Tiada atau Solo     | Tidak (Tiada konsensus, tiada perlombongan, tiada keselamatan) |
+| 2 Node        | Mungkin 1 Pelombong | Hampir Tidak (Tiada keselamatan, mudah diserang)               |
+| ~10 Node      | Beberapa Pelombong  | Rapuh (Tetapi masih terlalu terpusat)                          |
+| 100+ Node     | Pelombong Teragih   | Ya (Cukup untuk penyahpusatan asas)                            |
+
+### Bolehkah kita run Bitcoin Node dalam komputer harian?
+
+Secara teknikalnya, boleh. Tetapi secara praktikalnya, tidak. Bitcoin node sepatutnya aktif sepanjang masa untuk memastikan jaringan kekal _update to date_ dengan transaksi terbaru.
+
+### Berapa banyak node yang ada sekarang?
+
+Setakat ni lebih kurang 22,000 node yang boleh dicapai berdasarkan laman web ini https://bitnodes.io/ dan akan berubah dari semasa ke semasa.
+
+<ImageWithCaption
+  src="/top-node.png"
+  alt="Sistem centralisasi"
+  caption="Versi Bitcoin software yang dijalankan mengikut bilangan pada 4 Mei 2025 dari laman web https://bitcoin.clarkmoody.com/dashboard/"
+  width={500}
+  height={300}
+/>
+
+<ImageWithCaption
+  src="/node.png"
+  alt="Sistem centralisasi"
+  caption="Gambaran Bitcoin node yang dijalan di selurah dunia"
+  width={700}
+  height={300}
+/>
 
 ## Perlu ke run Bitcoin Node sendiri?
 
@@ -105,38 +138,3 @@ Menjalankan node Bitcoin sendiri memberi anda kawalan penuh ke atas interaksi an
 Dengan node sendiri, anda boleh mengesahkan transaksi anda secara langsung dan menggunakan wallet seperti BlueWallet yang membenarkan anda sambung terus ke node anda untuk mendapatkan data transaksi dan menghantar transaksi dengan lebih peribadi dan selamat.
 
 Secara ringkasnya, Bitcoin Node adalah tulang belakang rangkaian Bitcoin, memastikan setiap transaksi disahkan, rangkaian kekal selamat, telus, dan _decentralized_. Walaupun tidak wajib, menjalankan node sendiri memberikan kawalan penuh, privasi yang lebih tinggi, dan keupayaan untuk mengesahkan transaksi anda secara bebas tanpa bergantung kepada pihak ketiga. Semakin banyak nod yang aktif, semakin kukuh dan tahan rangkaian Bitcoin terhadap sebarang cubaan manipulasi. Dengan menjalan node anda sendiri, anda bukan sahaja melindungi Bitcoin anda tetapi juga menyumbang secara aktif kepada kesihatan dan integriti keseluruhan ekosistem Bitcoin.
-
-## Soalan lain tentang Bitcoin Node
-
-### Berapa node diperlukan untuk Bitcoin berfungsi?
-
-| Bilangan Node | Kuasa Perlombongan  | Boleh Bitcoin Berfungsi?                                       |
-| ------------- | ------------------- | -------------------------------------------------------------- |
-| 1 Nod         | Tiada atau Solo     | Tidak (Tiada konsensus, tiada perlombongan, tiada keselamatan) |
-| 2 Nod         | Mungkin 1 Pelombong | Hampir Tidak (Tiada keselamatan, mudah diserang)               |
-| ~10 Nod       | Beberapa Pelombong  | Rapuh (Tetapi masih terlalu terpusat)                          |
-| 100+ Nod      | Pelombong Teragih   | Ya (Cukup untuk penyahpusatan asas)                            |
-
-### Bolehkah kita run Bitcoin Node dalam komputer harian?
-
-Secara teknikalnya, boleh. Tetapi secara praktikalnya, tidak. Bitcoin node sepatutnya aktif sepanjang masa untuk memastikan jaringan kekal _update to date_ dengan transaksi terbaru.
-
-### Berapa banyak node yang ada sekarang?
-
-Setakat ni lebih kurang 22,000 node yang boleh dicapai berdasarkan laman web ini https://bitnodes.io/ dan akan berubah dari semasa ke semasa.
-
-<ImageWithCaption
-  src="/top-node.png"
-  alt="Sistem centralisasi"
-  caption="Versi Bitcoin software yang dijalankan mengikut bilangan pada 4 Mei 2025 dari laman web https://bitcoin.clarkmoody.com/dashboard/"
-  width={500}
-  height={300}
-/>
-
-<ImageWithCaption
-  src="/node.png"
-  alt="Sistem centralisasi"
-  caption="Gambaran Bitcoin node yang dijalan di selurah dunia"
-  width={700}
-  height={300}
-/>
