@@ -35,7 +35,7 @@ export const businessList: Business[] = [
     type: "digital",
   },
   {
-    title: "KabusCamp",
+    title: "Kabus Camp",
     imgSrc: "/biz/kabuscamp.webp",
     tags: ["campsite"],
     href: "https://www.tiktok.com/@kabuscamp",
