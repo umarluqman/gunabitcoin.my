@@ -17,7 +17,7 @@ interface Business {
 export const businessList: Business[] = [
   {
     title: "Nutrient Native",
-    imgSrc: "/biz/nutrient-native.jpeg",
+    imgSrc: "/biz/nutrient-native.webp",
     tags: ["natural"],
     href: "https://nutrientnative.orderla.co?via=FVoLvQ",
     description:
@@ -28,11 +28,22 @@ export const businessList: Business[] = [
   {
     title: "Bitcoin for Palestine",
     tags: ["sedekah"],
-    imgSrc: "/biz/bitcoin-for-gaza.jpg",
-    href: "https://btcpay.foragoodcause.xyz/apps/37W6GRGutGU9a4F61uHeFcjHFyQv/crowdfund",
+    imgSrc: "/biz/bitcoin-for-gaza.webp",
+    href: "https://x.com/Yusef_Mahmoud1",
     description:
       "Emergency appeal for aid for the people of Gaza, donate directly to Youssef Mahmoud and follow the updates in his X (formally Twitter) account.",
     type: "digital",
+  },
+  {
+    title: "KabusCamp",
+    imgSrc: "/biz/kabuscamp.webp",
+    tags: ["campsite"],
+    href: "https://www.tiktok.com/@kabuscamp",
+    facebook: "https://www.facebook.com/p/Kabus-Camp-61563342671835/",
+    instagram: "https://www.instagram.com/kabuscamp/",
+    description: "Off grid campsite in Lenggong, Perak",
+    type: "fizikal",
+    featured: false,
   },
   {
     title: "Global Sadaqah",
@@ -57,7 +68,7 @@ export const businessList: Business[] = [
     title: "Ayam Lepas Lenggeng",
     tags: ["natural"],
     description: `Ayam Lepas Berdaulat. Untuk Yang Berjiwa Sihat | We prefer #Bitcoin.`,
-    imgSrc: "/biz/ayam-lepas-lenggeng.jpg",
+    imgSrc: "/biz/ayam-lepas-lenggeng.webp",
     location: "Klang Valley & Negeri Sembilan",
     href: "https://ayamlepaslenggeng.orderla.my/ayam-lepas-bebas",
     twitter: "https://x.com/AyamLepasMY",
@@ -68,21 +79,21 @@ export const businessList: Business[] = [
     title: "Tradisi Leluhur",
     tags: ["natural"],
     description: `Jika baik untuk dimakan, baik juga untuk luaran | Based Hair×Facial×Body Care Company | 100% Natural.`,
-    imgSrc: "/biz/tradisi-leluhur.jpg",
+    imgSrc: "/biz/tradisi-leluhur.webp",
     href: "https://tradisileluhur.orderla.co/?ref=vSmqjU",
     takeApp: "https://take.app/tradisileluhur",
     twitter: "https://x.com/TradisiLeluhur",
     type: "fizikal",
-    featured: true,
+    featured: false,
   },
   {
-    title: "My Espresso Cafe",
-    tags: ["restoran"],
-    description: `Best place for high quality coffee.
-  Accepts Bitcoin.`,
+    title: "Blossom Space, Subang Jaya",
+    tags: ["co-working space"],
+    description: `A quiet space for you to work and blossom.`,
     location: "Subang Jaya, Selangor",
-    imgSrc: "/biz/myespresso-coffee.jpg",
+    imgSrc: "/biz/blossomspace.webp",
     href: "https://www.myespresso.my/",
+    instagram: "https://www.instagram.com/myblossomspace/",
     type: "fizikal",
   },
   {
@@ -91,7 +102,7 @@ export const businessList: Business[] = [
     description: `Membantu anda untuk tidur dengan lebih nyenyak & lebih berkualiti.
   
   Ada masalah tidur? Tanya di sini: https://ngl.link/tidurnyenyak1`,
-    imgSrc: "/biz/nyenyak.png",
+    imgSrc: "/biz/nyenyak.webp",
     href: "https://nyenyak.orderla.co?via=TxOQOt",
     twitter: "https://x.com/OfficialNyenyak",
     type: "fizikal",
@@ -101,7 +112,7 @@ export const businessList: Business[] = [
     title: "Senji House",
     tags: ["natural"],
     description: `A house for the decentralized livings. ☀️💧🧲`,
-    imgSrc: "/biz/senji-house.jpg",
+    imgSrc: "/biz/senji-house.webp",
     location: "Ampang, Selangor",
     href: "https://senjihouse.com.my/",
     twitter: "https://x.com/senjihouse",
