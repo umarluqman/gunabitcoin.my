@@ -26,15 +26,6 @@ export const businessList: Business[] = [
     featured: true,
   },
   {
-    title: "Bitcoin for Palestine",
-    tags: ["sedekah"],
-    imgSrc: "/biz/bitcoin-for-gaza.webp",
-    href: "https://x.com/Yusef_Mahmoud1",
-    description:
-      "Emergency appeal for aid for the people of Gaza, donate directly to Youssef Mahmoud and follow the updates in his X (formally Twitter) account.",
-    type: "digital",
-  },
-  {
     title: "Kabus Camp",
     imgSrc: "/biz/kabuscamp.webp",
     tags: ["campsite"],
