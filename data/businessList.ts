@@ -136,4 +136,13 @@ export const businessList: Business[] = [
     href: "https://aperture.beepit.com/",
     type: "fizikal",
   },
+  {
+    title: "Kedai Kopi Xiong Wor, Taman Tun Dr. Ismail",
+    tags: ["restaurant"],
+    description: `59 Years of Curry Mee Legacy🍜
+Halal Cert Ingredients & Muslim Friendly`,
+    imgSrc: "/biz/kedai-kopi-xiong-wor.webp",
+    href: "https://www.instagram.com/xiongworcurrymee/?hl=en",
+    type: "fizikal",
+  },
 ];
