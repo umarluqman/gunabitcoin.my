@@ -41,13 +41,13 @@ export function Footer() {
                 <Github className="h-4 w-4" />
                 GitHub
               </Link>
-              <Link
+              {/* <Link
                 href="https://www.dialisis.my/"
                 target="_blank"
                 className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-2"
               >
                 Dialisis MY - Cari lebih 900+ pusat dialisis dengan mudah.
-              </Link>
+              </Link> */}
             </nav>
           </div>
         </div>
