@@ -145,4 +145,28 @@ Halal Cert Ingredients & Muslim Friendly`,
     href: "https://www.instagram.com/xiongworcurrymee/?hl=en",
     type: "fizikal",
   },
+  {
+    title: "Gua KL, Desa Sri Hartamas",
+    tags: ["restaurant"],
+    description:
+      "Tranquil all-day dining in Desa Sri Hartamas featuring sustainable ingredients and innovative tradition in every bite.",
+    imgSrc: "/biz/gua-kl.webp",
+    location: "Kuala Lumpur",
+    href: "https://guakl.com",
+    instagram: "https://www.instagram.com/guaakl",
+    facebook: "https://www.facebook.com/guaakl/",
+    type: "fizikal",
+  },
+  {
+    title: "Tony's New York Pizza, Bangsar",
+    tags: ["restaurant"],
+    description:
+      "Handmade New York-style pizza by the slice or pie, wings & bites.",
+    imgSrc: "/biz/tonys-new-york-pizza.webp",
+    location: "Kuala Lumpur",
+    href: "https://tonysnewyorkpizza.my/",
+    instagram: "https://www.instagram.com/tonyspizzamalaysia/",
+    facebook: "https://www.facebook.com/profile.php?id=61584144720853",
+    type: "fizikal",
+  },
 ];
